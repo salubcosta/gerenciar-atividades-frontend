@@ -1,0 +1,130 @@
+/* Pagina.css — estilos compartilhados entre todas as páginas */
+
+.pagina {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 32px 24px 48px;
+}
+
+/* Cabeçalho interno da página (título + botão de ação) */
+.pagina-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 24px;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.pagina-titulo {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #111;
+}
+
+.pagina-subtitulo {
+	font-size: 0.82rem;
+	color: #888;
+	margin-top: 2px;
+}
+
+/* Grade de cards */
+.lista-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+.lista-vazia {
+	color: #888;
+	font-size: 0.9rem;
+	padding: 16px 0;
+}
+
+/* Formulários */
+.form-card {
+	background: #fff;
+	border-radius: 10px;
+	padding: 24px;
+	max-width: 480px;
+}
+
+.form-titulo {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #111;
+	margin-bottom: 20px;
+}
+
+.form-grupo {
+  	margin-bottom: 14px;
+}
+
+.form-label {
+	display: block;
+	font-size: 0.8rem;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.form-input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.875rem;
+	outline: none;
+	resize: vertical;
+}
+
+.form-input:focus {
+  	border-color: #111;
+}
+
+.form-input[readonly] {
+	background: #f5f5f5;
+	color: #888;
+}
+
+.form-acoes {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+/* Botões inline — estilos globais */
+.btn {
+	padding: 8px 18px;
+	border: none;
+	border-radius: 6px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.85rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+.btn:hover    { opacity: 0.8; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-primario   { background: #111; color: lime; }
+.btn-secundario { background: transparent; color: #555; border: 1px solid #ccc; }
+.btn-perigo     { background: #c0392b; color: #fff; }
+.btn-aviso      { background: #f39c12; color: #fff; }
+
+/* Link estilizado como texto */
+.link-btn {
+	background: none;
+	border: none;
+	color: #111;
+	text-decoration: underline;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-size: inherit;
+	padding: 0;
+}
+
+@media (max-width: 600px) {
+  	.pagina { padding: 20px 16px 40px; }
+}

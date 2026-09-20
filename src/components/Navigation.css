@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap; /*Permite que os itens quebrem para a próxima linha se necessário*/
+}
+.nav-link {
+    color: #aaa;
+    text-decoration: none;
+    padding: 12px 12px;
+    border-radius: 6px; /*verificar*/
+    font-size: 0.85rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255,255, 255, 0.08);
+}
+.nav-link.ativo {
+    color: lime;
+    background: rgba(0, 255, 0, 0.1);
+}

@@ -1,0 +1,45 @@
+/* Home */
+.home-header {
+    background: #111;
+    padding: 56px 24px;
+    text-align: center;
+}
+.home-titulo {
+    color: #ccc;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.home-destaque {
+    color: lime;
+    font-weight: 600;
+}
+.home-subtitulo {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* Trabalhando um pouco dos cards */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 32px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* trabalhando responsividade */
+@media (max-width: 600px) {
+    .home-titulo { 
+        font-size: 1.3rem; 
+    }
+    .home-grid { 
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-grid { 
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset básico: remove margens e paddings padrão do navegador */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f0f0f0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+  	flex: 1; /* Vai ocupar espaço disponível, empurrando o rodapé para baixo*/
+}
+
+.estado-aplicacao {
+	max-width: 900px;
+	margin: 60px auto;
+	padding: 24px;
+	text-align: center;
+}
+
+.estado-erro {
+	color: #9b2226;
+}
+
+.pessoa-endereco {
+	margin-bottom: 12px;
+	line-height: 1.6;
+}
+
+.form-ajuda {
+	margin-top: 8px;
+	color: #666;
+	font-size: 0.85rem;
+}
+footer {
+	background-color: #111;
+	height: 120px;
+	color: #CCC;
+}
+.rodape {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 5px 20px;
+}
+
+.rodape a {
+	color: aqua;
+	font-weight: bold;
+	transition: color 1s;
+}
+.rodape a:hover {
+  	color: lawngreen;
+}
