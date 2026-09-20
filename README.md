@@ -4,7 +4,7 @@ Aplicação React para gerenciamento de atividades organizadas por projetos e ca
 
 ## Descrição
 
-O sistema permite cadastrar **categorias**, **projetos**, **atividades** e **meus dados**. As operações de criação, edição, consulta e exclusão são persistidas pela API backend. O endereço da pessoa é preenchido pelo backend a partir do CEP consultado no ViaCEP.
+O sistema permite cadastrar **categorias**, **projetos**, **atividades** e **meus dados**. As operações de criação, edição, consulta e exclusão são persistidas pela API backend. O endereço da pessoa é preenchido pelo backend a partir do CEP consultado pela API Externa do ViaCEP (<i>toda manipulação é realizada no backend</i>)
 
 ## Tecnologias
 
