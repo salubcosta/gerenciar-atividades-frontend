@@ -52,7 +52,7 @@ gerenciar-atividades-frontend/
 │   ├── services/
 │   │   └── api.js           # Cliente HTTP para a API backend
 │   ├── pages/
-│   │   ├── Home.jsx         # Página hoje com resumo de categorias, projetos e atividades
+│   │   ├── Home.jsx         # Página inicial com resumo de categorias, projetos e atividades
 │   │   ├── Home.css
 │   │   ├── Categorias.jsx   # CRUD de categorias
 │   │   ├── Projetos.jsx     # CRUD de projetos com filtro por categoria
@@ -84,9 +84,9 @@ O arquivo `src/data/dados.json` foi removido. Categorias, projetos, atividades e
 
 ## Contrato com a API
 
-Por padrão, durante o desenvolvimento, o frontend acessa `http://localhost:5000`. A URL pode ser alterada pela variável `REACT_APP_API_URL`.
+Durante o desenvolvimento, o frontend é servido em http://localhost:3000 e, por padrão, envia requisições à API em http://localhost:5000. O endereço da API pode ser alterado pela variável REACT_APP_API_URL.
 
-No build Docker, o frontend usa `/api`, encaminhado pelo Nginx para o backend na porta `5000`.
+No build Docker, a API é acessada pelo caminho relativo /api. O Nginx recebe essas requisições e as encaminha ao backend na porta 5000
 
 Endpoints utilizados:
 
