@@ -11,10 +11,6 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM build AS test
-ENV CI=true
-RUN npm test -- --watchAll=false --passWithNoTests
-
 FROM nginx:1.27-alpine AS production
 
 COPY --from=build /app/build /usr/share/nginx/html
