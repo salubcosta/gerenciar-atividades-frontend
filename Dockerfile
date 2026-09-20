@@ -18,4 +18,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+ENV APP_URL=http://localhost:3000
+
+CMD ["sh", "-c", "printf '\\nAplicação disponível em: %s\\n\\n' \"$APP_URL\"; exec nginx -g 'daemon off;'"]
