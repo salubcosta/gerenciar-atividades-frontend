@@ -145,7 +145,8 @@ Execute o frontend na porta `3000`:
 docker run --rm --name gerenciar-atividades-frontend -p 3000:80 gerenciar-atividades-frontend
 ```
 
-Acesse `http://localhost:3000`. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
+Ao iniciar, o container exibe `Aplicação disponível em: http://localhost:3000` no terminal. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
+
 
 Importante esclarecer que `http://host.docker.internal:5000` é um endereço especial usado por containers Docker para acessar serviços que estão rodando na máquina hospedeira, neste caso, no Windows.
 
