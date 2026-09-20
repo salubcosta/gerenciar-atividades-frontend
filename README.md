@@ -22,7 +22,7 @@ O sistema permite cadastrar **categorias**, **projetos**, **atividades** e **meu
 - **Atividades** — gerenciadas dentro do detalhe de cada projeto; permite adicionar, editar e excluir atividades vinculadas ao projeto.
 - **Meus dados** — consulta, cadastro, edição e exclusão de pessoas consumindo `/pessoas` no backend.
 - **Navegação integrada** — ao clicar em "Ver projetos" em uma categoria, a página de Projetos abre já filtrada por aquela categoria (via `useNavigate` / `state`). Ao criar um projeto sem categoria cadastrada, há atalho direto para criar uma.
-- **Alertas temporários** — feedback visual (sucesso, aviso, erro) com auto-dismiss em 3 segundos.
+- **Alertas temporários** — feedback visual (sucesso, aviso, erro) com auto-dismiss em 6 segundos.
 - **Estado vazio** — componente `ListaVazia` exibido quando não há itens na lista.
 
 ## Estrutura de Pastas
