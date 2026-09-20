@@ -1,6 +1,6 @@
 # Atividades por Projetos
 
-Aplicação React para gerenciamento de atividades organizadas por projetos e categorias, integrada à API Flask do backend, disponível em: [Gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
+Aplicação React para gerenciamento de atividades organizadas por projetos e categorias, integrada à API Flask do backend, disponível em: [gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
 
 ## Descrição
 
@@ -64,7 +64,7 @@ gerenciar-atividades-frontend/
 │   └── routes/
 │       └── AppRoutes.jsx    # Definição centralizada de rotas
 ├── package.json
-├── Dockerfile                # Build, testes e imagem de produção
+├── Dockerfile                # Build e imagem de produção
 ├── nginx.conf                # Servidor React e proxy para a API
 └── .gitignore
 ```
@@ -99,7 +99,7 @@ Endpoints utilizados:
 
 O cadastro de pessoas envia o CEP ao backend, que consulta o ViaCEP e retorna os dados do endereço. Número, complemento e bairro podem ser nulos.
 
-## Instalação e Execução
+## Instalação e Execução <small><i>(sem o docker)</i></small>
 
 ### Pré-requisitos
 
@@ -121,27 +121,14 @@ npm start
 ```
 A aplicação estará disponível em `http://localhost:3000`.
 
-### Executando com Docker
+# Executando com Docker
 
-O backend e o frontend são projetos independentes, localizados em diretórios irmãos:
+O backend e o frontend são projetos independentes, no entanto, é interessante executar o backend para ter uma melhor experiência. Para detalhes de execução do backend, acesse: [gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
 
-```text
-mvp/
-├── gerenciar-atividades-backend-api/
-└── gerenciar-atividades-frontend/
-```
 
-Primeiro, na pasta `gerenciar-atividades-backend-api`, construa e execute a API:
+Após execução do backend, dentro o diretório raiz do frontend, construa a imagem:
 
 ```bash
-docker build -t gerenciar-atividades .
-docker run -d --name gerenciar-atividades-backend -p 5000:5000 gerenciar-atividades
-```
-
-Em outro terminal, entre na pasta irmã `gerenciar-atividades-frontend` e construa a imagem:
-
-```bash
-cd ../gerenciar-atividades-frontend
 docker build -t gerenciar-atividades-frontend .
 ```
 
@@ -153,6 +140,13 @@ docker run --rm --name gerenciar-atividades-frontend -p 3000:80 gerenciar-ativid
 
 Acesse `http://localhost:3000`. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
 
+Importante esclarecer que `http://host.docker.internal:5000` é um endereço especial usado por containers Docker para acessar serviços que estão rodando na máquina hospedeira, neste caso, no Windows.
+
+Um possível fluxo seria este:
+```Plain text
+Browser → frontend/Nginx → host.docker.internal:5000 → backend Flask
+```
+
 Para parar os containers:
 
 ```bash
@@ -161,11 +155,3 @@ docker rm gerenciar-atividades-frontend gerenciar-atividades-backend
 ```
 
 No desenvolvimento local, execute o backend em `http://localhost:5000` e o frontend com `npm start` em `http://localhost:3000`.
-
-Para executar build e testes dentro do Docker:
-
-```bash
-docker build --target test -t gerenciar-atividades-frontend-test .
-```
-
-Esse estágio executa `npm run build` e `npm test -- --watchAll=false --passWithNoTests` dentro do container.
