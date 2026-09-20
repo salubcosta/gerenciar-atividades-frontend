@@ -110,8 +110,8 @@ O cadastro de pessoas envia o CEP ao backend, que consulta o ViaCEP e retorna os
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/salubcosta/frontend-projetos-react.git
-cd frontend-projetos-react
+git clone https://github.com/salubcosta/gerenciar-atividades-frontend.git
+cd gerenciar-atividades-frontend
 
 # 2. Instale as dependências
 npm install
@@ -125,8 +125,15 @@ A aplicação estará disponível em `http://localhost:3000`.
 
 O backend e o frontend são projetos independentes, no entanto, é interessante executar o backend para ter uma melhor experiência. Para detalhes de execução do backend, acesse: [gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
 
+Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
 
-Após execução do backend, dentro o diretório raiz do frontend, construa a imagem:
+```bash
+# Clone o repositório
+git clone https://github.com/salubcosta/gerenciar-atividades-frontend.git
+cd gerenciar-atividades-frontend
+```
+
+Dentro o diretório raiz do frontend, construa a imagem:
 
 ```bash
 docker build -t gerenciar-atividades-frontend .
