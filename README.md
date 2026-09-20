@@ -1,6 +1,6 @@
 # Atividades por Projetos
 
-Aplicação React para gerenciamento de atividades organizadas por projetos e categorias, integrada à API Flask do backend.
+Aplicação React para gerenciamento de atividades organizadas por projetos e categorias, integrada à API Flask do backend, disponível em: [Gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
 
 ## Descrição
 
