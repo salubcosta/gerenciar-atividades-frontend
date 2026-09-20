@@ -155,3 +155,8 @@ docker rm gerenciar-atividades-frontend gerenciar-atividades-backend
 ```
 
 No desenvolvimento local, execute o backend em `http://localhost:5000` e o frontend com `npm start` em `http://localhost:3000`.
+
+## Autor do projeto
+
+**Salumão Barbosa da Costa**  
+Pós-graduando em Desenvolvimento Full Stack na PUC-Rio
