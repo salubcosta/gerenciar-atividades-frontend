@@ -130,11 +130,13 @@ npm start
 ```
 A aplicação estará disponível em <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>.
 
+<hr>
+
 # Executando com Docker
 
 O backend e o frontend são projetos independentes, no entanto, é interessante executar o backend para ter uma melhor experiência. Para detalhes de execução do backend, acesse: [gerenciar-atividades-backend-api](https://github.com/salubcosta/gerenciar-atividades-backend-api).
 
-Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
+### 1. Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
 
 ```bash
 # Clone o repositório
@@ -143,25 +145,31 @@ git clone https://github.com/salubcosta/gerenciar-atividades-frontend.git
 cd gerenciar-atividades-frontend
 ```
 
-Dentro o diretório raiz do frontend, construa a imagem:
+### 2. Dentro o diretório raiz do frontend, construa a imagem:
 
 ```bash
 docker build -t gerenciar-atividades-frontend .
 ```
 
-Execute o frontend na porta `3000`:
+### 3. Crie e execute o container para trabalhar com o frontent. O frontend está na porta `3000`:
 
 ```bash
 docker run -d --name gerenciar-atividades-frontend -p 3000:80 gerenciar-atividades-frontend
 ```
 
-Ao iniciar, o container com o frontend estará disponível em: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
+### 4. Ao iniciar, o container com o frontend estará disponível em: 
+<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
 
-Importante esclarecer que `http://host.docker.internal:5000` é um endereço especial usado por containers Docker para acessar serviços que estão rodando na máquina hospedeira, neste caso, no Windows.
+<hr>
+
+Observações:
+- O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
+- Importante esclarecer que `http://host.docker.internal:5000` é um endereço especial usado por containers Docker para acessar serviços que estão rodando na máquina hospedeira, neste caso, no Windows.
+
 
 Um possível fluxo seria este:
 ```Plain text
-Browser → frontend/Nginx → host.docker.internal:5000 → backend Flask
+Browser → frontend/Nginx (porta:3000) → host.docker.internal:5000 → backend Flask
 ```
 
 Para parar e remover o container:
