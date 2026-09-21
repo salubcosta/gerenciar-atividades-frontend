@@ -99,6 +99,15 @@ Endpoints utilizados:
 
 O cadastro de pessoas envia o CEP ao backend, que consulta o ViaCEP e retorna os dados do endereço. Número, complemento e bairro podem ser nulos.
 
+## Arquitetura da solução <small><i>(Cenário 1.1)</i></small>
+
+Conforme requisito do MVP, a implementação foi construída de acordo com o cenário 1.1, onde temos um frontend que se comunicação com o backend e este, faz a comunicação com API Externa e persiste dados no banco de dados.
+
+Segue desenho da arquitetura:
+
+<img src="https://github.com/salubcosta/gerenciar-atividades-backend-api/blob/main/figure/arquitetura.png?raw=true" width="100%">
+<small>Imagem capturada diretamente do repositório que trabalha com o backend</small>
+
 ## Instalação e Execução <small><i>(sem o docker)</i></small>
 
 ### Pré-requisitos
