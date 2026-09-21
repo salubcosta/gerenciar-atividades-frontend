@@ -119,7 +119,7 @@ npm install
 # 3. Inicie o servidor de desenvolvimento
 npm start
 ```
-A aplicação estará disponível em `http://localhost:3000`.
+A aplicação estará disponível em <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>.
 
 # Executando com Docker
 
@@ -130,6 +130,7 @@ Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
 ```bash
 # Clone o repositório
 git clone https://github.com/salubcosta/gerenciar-atividades-frontend.git
+
 cd gerenciar-atividades-frontend
 ```
 
@@ -145,7 +146,7 @@ Execute o frontend na porta `3000`:
 docker run -d --name gerenciar-atividades-frontend -p 3000:80 gerenciar-atividades-frontend
 ```
 
-Ao iniciar, o container exibe `Aplicação disponível em: http://localhost:3000` no terminal. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
+Ao iniciar, o container com o frontend estará disponível em: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>. O Nginx serve a aplicação React e encaminha chamadas `/api/*` para `http://host.docker.internal:5000`.
 
 Importante esclarecer que `http://host.docker.internal:5000` é um endereço especial usado por containers Docker para acessar serviços que estão rodando na máquina hospedeira, neste caso, no Windows.
 
@@ -160,8 +161,6 @@ Para parar os containers:
 docker stop gerenciar-atividades-frontend gerenciar-atividades-backend
 docker rm gerenciar-atividades-frontend gerenciar-atividades-backend
 ```
-
-No desenvolvimento local, execute o backend em `http://localhost:5000` e o frontend com `npm start` em `http://localhost:3000`.
 
 ## Autor do projeto
 
