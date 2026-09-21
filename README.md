@@ -157,7 +157,7 @@ docker build -t gerenciar-atividades-frontend .
 docker run -d --name gerenciar-atividades-frontend -p 3000:80 gerenciar-atividades-frontend
 ```
 
-### 4. Ao iniciar, o container com o frontend estará disponível em: 
+### 4. Após a execução do passo 3, a aplicação frontend estará disponível em: 
 <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
 
 <hr>
