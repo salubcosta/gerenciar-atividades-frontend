@@ -155,11 +155,11 @@ Um possível fluxo seria este:
 Browser → frontend/Nginx → host.docker.internal:5000 → backend Flask
 ```
 
-Para parar os containers:
+Para parar e remover o container:
 
 ```bash
-docker stop gerenciar-atividades-frontend gerenciar-atividades-backend
-docker rm gerenciar-atividades-frontend gerenciar-atividades-backend
+docker stop gerenciar-atividades-frontend 
+docker rm gerenciar-atividades-frontend
 ```
 
 ## Autor do projeto
